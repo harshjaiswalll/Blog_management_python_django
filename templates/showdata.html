@@ -1,0 +1,64 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="container">
+    <div class="col-sm-6 mx-auto mt-3">
+        <div class="alert alert-info">
+            SHOW ALL MY DATA
+        </div>
+        <table class="table">
+            <thead>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>AGE</th>
+                <th>ACTION</th>
+            </thead>
+            <tbody>
+                {% for x in records %}
+                <tr>
+                    <td>{{x.name}}</td>
+                    <td>{{x.email}}</td>
+                    <td>{{x.password}}</td>
+                    <td>{{x.age}}</td>
+                    <td>{{x.action}}</td>
+                    <td>
+                        <a href="/delete?sid={{x.id}}" onclick="return confirmdata()" class="btn btn-danger"> delete</a>
+                    </td>
+                    <td>
+                        <a href="/edit?editid={{x.id}}" onclick="return confirmdataedit()" class="btn btn-danger"> edit</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<script>
+    function confirmdata() {
+        var data = confirm("are u sure want to delete");
+        if (data == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    function confirmdataedit() {
+        var data = confirm("are u sure want to edit");
+        if (data == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+</script>
+
+
+{% endblock %}

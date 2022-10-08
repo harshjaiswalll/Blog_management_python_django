@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="/">Logo</a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/showdata">show</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#myModal" data-toggle="modal" data-target="#myModal">login</a>
+            <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+              Signup
+             </button> -->
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="container"> 
+          {% for data in userdata %}
+        <form action="/update/" method="post">
+            {% csrf_token %}         
+            <div class="form-group">
+
+                <label for="">Name</label>
+                <input type="hidden" name="id" value="{{data.id}}">
+                <input type="text" name="nm" value="{{data.name}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="text" name="eid" value="{{data.email}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="text" name="pwd" value="{{data.password}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Age</label>
+                <input type="text" name="age" value="{{data.age}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" name="btn" value="Edit User" class="btn btn-info">    
+            </div>
+        </form>
+            {% endfor %}
+</body>
+</html>

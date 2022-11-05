@@ -1,0 +1,314 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   body {
+    font-family: cursive;
+   }
+   a {
+    text-decoration: none;
+   }
+   li {
+    list-style: none;
+   }
+
+   /* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: powderblue;
+    color: #653614;
+   }
+   .nav-links a {
+    color: #653614;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li :hover{
+       color: #478b0f;
+
+   }
+  
+   .menu li {
+    padding: 5px 14px;
+   }
+  
+   /* RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+   .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+   }
+   /* APPLYING MEDIA QUERIES */
+   @media (max-width: 768px) {
+   .menu { 
+    display:none;
+    position: absolute;
+    background-color:powderblue;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+   }
+  
+   .menu li:hover {
+    display: inline-block;
+    background-color:#7CB74C;
+    transition: 0.3s ease;
+   }
+   .menu li + li {
+    margin-top: 12px;
+    margin-bottom:10px
+   }
+   input[type=checkbox]:checked ~ .menu{
+    display: block;
+   }
+   .hamburger {
+    display: block;
+    text-align: right;
+   }
+   .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+   }
+   .dropdown li:hover {
+    background-color: #08a017;
+   }
+   }
+
+  
+
+
+
+
+nav p{
+    text-align: left;
+}
+
+
+body{
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: #40514E;
+}
+
+h1{
+    font-family: 'Sacramento', cursive;
+    color: #735151;
+    font-size: 6.23rem;
+    padding-top: 100px;
+    margin:0;
+    line-height: 1;
+}
+
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #66BFBF;
+    font-size: 40px;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+    font-weight: 700;
+}
+
+
+
+hr{
+    
+    border-style: dotted none none none;
+    border-color: #cecece;
+    border-width: 7px;
+    width: 4%;
+    margin: auto;
+}
+
+/* *************************************************************TOP CONTAINER ******************************************************* */
+
+.upper-container{
+    background-color: powderblue;
+}
+
+.mountain{
+    height: 37.999%;
+    width: 37.999%;
+    
+}
+
+
+.webdesigner{
+    font-family: 'Sacramento', cursive;
+    color: #757575;
+    font-size: 3.125rem;
+    margin: 0px;
+}
+.profile{
+    width: 37%;                 /*400.12px;*/    /* 35%  */
+    margin: 100px auto 100px auto ;
+    line-height: 2; 
+}
+.profile_img{
+    height: 150px;
+    width: 150px;
+}
+
+
+.skills{
+    width: 45%;
+    margin: 100px auto 160px auto ;
+    line-height: 2;
+}
+
+/* .skills h3{
+    text-align: left;
+} */
+
+
+.skillimg{
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin:0 25px;
+}
+.helpimg{
+    float: right;
+    height: 150px;
+    width: 150px;
+    margin:0 25px;
+}
+
+.skill-row{
+    margin : 40px auto 100px auto ;
+    line-height: 2;
+}
+
+
+
+@media (min-width:300px) and (max-width:1000px) {
+    .skillimg{
+        float: none;
+    }
+    .helpimg{
+        float: none;
+    }
+    
+}
+
+
+@media (max-width:415px){
+
+    .profile{
+        width: 80%;
+    }
+
+    .skills{
+        width: 80%;
+    }
+
+    .contact-me{
+        width: 100%;
+    }
+
+
+  
+   h1{
+       font-size: 3rem;
+   }
+   .webdesigner{
+       font-size: 2rem;
+   }
+} 
+
+
+/* **********************************************GET IN TOUCH ***************************************** */
+
+
+.contact-me{
+        width: 65%;
+        margin: 100px auto ;
+        line-height: 2;
+    }
+
+
+    
+
+
+.btn {
+    border: solid 1px rgb(83, 83, 83);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 15px;
+    background: #16b8b8;
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    background: #037885;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+  .contact-me{
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+
+/* *********************************************************BOTTOM CONTAINER************************************************** */
+
+
+.bottom-container{
+    background-color: rgb(176 224 230); 
+    padding: 50px 0 40px 0;
+}
+
+.footer-link{
+    font-size: 0.91rem;
+    font-weight: 700;
+    color:#11999E;
+    padding: 0px 50px;
+  } 
+
+.bottom-container p {
+    font-size: 15px;
+    padding-top: 50px;
+    color: #7f7f7f;
+}

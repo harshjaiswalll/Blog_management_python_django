@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 const https = require("https");
-const cors = require("cors")
+
 
 
 const app = express()
@@ -18,7 +18,6 @@ mongoose.connect('mongodb+srv://admin-dhruv:thakor00@cluster0.hv4rspl.mongodb.ne
     useUnifiedTopology: true 
 });
 
-app(cors())
 
 var db = mongoose.connection;
 
